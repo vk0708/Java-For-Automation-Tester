@@ -1,0 +1,28 @@
+package controlStatement;
+
+public class ifElse {
+	public static void main(String[] args) {
+	int a = 10;
+	
+	//if statement
+	if(a == 10) {
+		System.out.println("Welcome!!!");
+	}
+	
+	//if- else statement
+	if(a>=18)	{
+		System.out.println("You are Eligible");
+	}
+	else{
+		System.out.println("You are Not Eligible");
+	}
+	
+	// if- else statement
+	if(a % 2 == 0) {
+		System.out.println("Number is Even");
+	}
+	else {
+		System.out.println("Number is Odd");
+	}
+}
+}
