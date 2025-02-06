@@ -1,5 +1,10 @@
 # JAVA
-## What is Java?
+[Introduction](README.md#Introsuction)
+[Basics](README.md#basics)
+- All contains are dropdown
+
+<details>
+<summary>## Introduction<summary>
 • Java is a programming language that helps developers build software applications. It follows 
 an object-oriented approach, meaning it organizes code into reusable objects.
 
@@ -22,6 +27,7 @@ Programming languages can be grouped based on how they're structured:
 4. Inheritance
 5. Abstraction
 6. Encapsulation
+</details>
 
 <details>
 <summary>Basics of Java</summary>
@@ -105,6 +111,8 @@ Example: int x = 10;
 ## Java Keywords:
  
 Keywords in Java are also known as reserved words. These are the predefined words therefore they can’t be used as a variable name. If we will use keywords as a variable name, the result will be a compile-time error. The list of all the Java Keywords is given below.
+
+[Back to Top](README.md#java)
 </details>
 
 
