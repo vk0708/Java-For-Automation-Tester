@@ -23,6 +23,8 @@ Programming languages can be grouped based on how they're structured:
 5. Abstraction
 6. Encapsulation
 
+<details>
+<summary>Basics of Java</summary>
 ## Java Features
 1. Platform Independent: Java can run on any device with Java Runtime Environment (JRE), 
 making it versatile.
@@ -74,5 +76,37 @@ Eclipse IDE Download & Installation (Refer the installation document)
 • Auto-Complete System Output: Type Syso then press Ctrl + Space (or CMD + Space on Mac).
 • Single-Line Comment: Press Ctrl + /
 • Multi-Line Comment: Press Ctrl + Shift + /
+
+</details>
+
+<details>
+<summary>Variables and Keywords</summary>
+### Introduction to Variables
+
+A Variable is a name given to a memory location. It is used to store a value that may vary. Java is a statically typed language, and hence, all the variables are declared before use.  
+
+#### Variable Declaration
+In Java, we can declare variables as follows:
+
+type: Type of the data that can be stored in this variable. It can be int, float, double, etc.
+name: Name given to the variable.
+data_type variable_name;
+
+Example: int x;
+
+In this way, we can only create a variable in the memory location. Currently, it doesn’t have any value. We can assign the value in this variable by using two ways:
+• By using variable initialization.
+• By taking input
+Here, we have discussed only the first way, i.e. variable initialization. We will discuss the second way later.
+
+data_type variable_name = value;
+Example: int x = 10;
+
+## Java Keywords:
+ 
+Keywords in Java are also known as reserved words. These are the predefined words therefore they can’t be used as a variable name. If we will use keywords as a variable name, the result will be a compile-time error. The list of all the Java Keywords is given below.
+</details>
+
+
 
 [LinkedIn](https://www.linkedin.com/in/vaibhav-kale)
