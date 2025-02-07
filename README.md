@@ -5,24 +5,28 @@
 
 - All contains are dropdown, So click on Arrow to view
 
-<details>
-<summary>Introduction</summary>
+## Introduction
 • Java is a programming language that helps developers build software applications. It follows 
 an object-oriented approach, meaning it organizes code into reusable objects.
 
-## Types of Programming Languages
+<details>
+
+### Types of Programming Languages
 Programming languages can be grouped based on how they're structured:
+
 1. Structured Programming Languages:
     o Examples: C, Python
     o These languages use a logical flow of commands.
+    
 2. Object-Based Programming Languages:
     o Examples: Visual Basic (VB), VBScript, Python
     o They support some object-oriented programming (OOP) ideas like classes and objects, but not inheritance.
+    
 3. Object-Oriented Programming (OOP) Languages:
     o Examples: C++, Java, C#, Python
     o These languages support all OOP concepts.
 
-##  OOP (Object Oriented Programming) Concepts
+###  OOP (Object Oriented Programming) Concepts
 1. Class
 2. Object
 3. Polymorphism
@@ -31,24 +35,31 @@ Programming languages can be grouped based on how they're structured:
 6. Encapsulation
 </details>
 
+## Basics 
 <details>
+
 <summary>Basics of Java</summary>
-## Java Features
+### Java Features
+
 1. Platform Independent: Java can run on any device with Java Runtime Environment (JRE), 
 making it versatile.
+
 2. Case Sensitive: Java treats uppercase and lowercase letters as different (e.g., a is not the 
 same as A).
 
-## Java Components
+### Java Components
+
 1. JDK (Java Development Kit): Tools for developing Java applications.
 2. JRE (Java Runtime Environment): Needed to run Java applications.
 3. JVM (Java Virtual Machine): Runs the Java code on your device.
 
-## Core Java vs. Advanced Java
+### Core Java vs. Advanced Java
+
 • Core Java: Focuses on the basics (Java SE).
 • Advanced Java: Covers more specialized topics (Java EE), like web services and databases.
 
-## Java Versions
+### Java Versions
+
 • JDK 8: Created by Sun Microsystems, now managed by Oracle.
 • Latest Version: JDK 22.
 • Recommended Version: JDK 11+ for most uses.
@@ -56,7 +67,8 @@ same as A).
     o Community Edition: Free and open-source (OpenJDK).
     o Licensed Edition: Commercial with long-term support (Oracle JDK).
 
-## JDK Download & Installation (Refer the installation document)
+### JDK Download & Installation (Refer the installation document)
+
 • Download and Install JDK
 • Set Java Path inside environment variables
 • Verify Installation inside command prompt
@@ -64,36 +76,43 @@ Eclipse IDE Download & Installation (Refer the installation document)
 • Download Eclipse IDE and install it.
 • Launch eclipse and create new java project.
 
-## Setting Up a Java Project in Eclipse
+### Setting Up a Java Project in Eclipse
+
 1. Create a New Java Project: File → New → Java Project
 2. Create a New Package: Right-click on src → New → Package
 3. Create a New Class: Right-click on the package → New → Class
 
-## Java Naming Conventions
+### Java Naming Conventions
+
 1. Start with an uppercase letter (e.g., MyClass).
 2. Class names shouldn't begin with numbers.
 3. Underscores (_) are allowed in class names.
 4. Avoid using special characters.
 5. Numbers are allowed but not as the first character.
 
-## Comments in Java
+### Comments in Java
+
 • Single-Line Comment: // This is a comment
 • Multi-Line Comment: /* This is a multi-line comment */
 
-## Keyboard Shortcuts
+### Keyboard Shortcuts
+
 • Auto-Complete System Output: Type Syso then press Ctrl + Space (or CMD + Space on Mac).
 • Single-Line Comment: Press Ctrl + /
 • Multi-Line Comment: Press Ctrl + Shift + /
 
+[Back to Top](README.md#java)
+
 </details>
 
-<details>
-<summary>Variables and Keywords</summary>
-### Introduction to Variables
+## Introduction to Variables
 
 A Variable is a name given to a memory location. It is used to store a value that may vary. Java is a statically typed language, and hence, all the variables are declared before use.  
 
-#### Variable Declaration
+<details>
+<summary>Read More</summary>
+
+### Variable Declaration
 In Java, we can declare variables as follows:
 
 type: Type of the data that can be stored in this variable. It can be int, float, double, etc.
@@ -110,16 +129,19 @@ Here, we have discussed only the first way, i.e. variable initialization. We wil
 data_type variable_name = value;
 Example: int x = 10;
 
-## Java Keywords:
+### Java Keywords:
  
 Keywords in Java are also known as reserved words. These are the predefined words therefore they can’t be used as a variable name. If we will use keywords as a variable name, the result will be a compile-time error. The list of all the Java Keywords is given below.
 
 [Back to Top](README.md#java)
 </details>
 
+## Data Types in JAVA
+The data type defines the type of value that can be stored in a variable. For example, if a variable has an int data type, it can only store an integer value. In java, there are two categories of data types.
+
 <details>
 <summary>Data Type</summary>
-The data type defines the type of value that can be stored in a variable. For example, if a variable has an int data type, it can only store an integer value. In java, there are two categories of data types.
+
 
 1. Primitive Data Type: A primitive data type is predefined by the language and is named by a keyword or reserved keyword. There are eight types of primitive data types in java such as boolean, char, int, short, byte, long, float, and double.
 - boolean: boolean data type specifies only one bit of information and it is used to store only two possible values either true or false.
@@ -132,9 +154,10 @@ long: long data type is 64-bit two’s complement integer. It can hold the numbe
 - char: The char data type is used to store characters. The char data type is a single 16-bit Unicode character. 
  
 
-1. Non-Primitive Data Type: Non-Primitive data type refers to the objects. ArrayList and String are some of the examples of Non-Primitive data type. We will discuss the Non-Primitive data type later. 
+2. Non-Primitive Data Type: Non-Primitive data type refers to the objects. ArrayList and String are some of the examples of Non-Primitive data type. We will discuss the Non-Primitive data type later. 
 
 Example
+```java
 // Primitive Data Types
 int price = 5000;                               // Integer Value
 float rateOfInterest = 5.99f;                   // Floating point number
@@ -142,20 +165,23 @@ char ch = 'a';                                  // Character
 
 // Non-Primitive Data Types
 String str = "Coding Ninjas";                   // String
-
+```
 [Back to Top](README.md#java)
 
 </details>
 
-<details>
-<summary>
-Types of Variable
-</summary>
+## Types of Variable
+
 A variable is a name given to memory location. There are three types of variables in java.
 
 - Local Variable.
 - Instance Variable.
 - Static variable
+
+<details>
+<summary>
+Read More here
+</summary>
 
 1. Local Variables: A variable that is defined inside a block, method body, or constructor is called a local variable. These variables are created when the methods are called and they get destroyed when the methods are executed and return to the caller. 
 The initialization of the local variable is mandatory. If you don’t initialize the variable before use, the compiler will give a compile-time error.
@@ -229,8 +255,81 @@ public class StudentDemo {
 	} 
 } 
  ```
+[Back to Top](README.md#java)
+
 </details>
 
+## TypeCasting in Java
+
+TypeCasting in Java is the process of converting one primitive data type into another. TypeCasting can be done automatically and explicitly. 
+
+<details>
+
+When we assign the value of one data type to another data type, then there is a chance that two data types might not be compatible with each other. The Java compiler will automatically perform the conversion if the data types are consistent. This type of conversion is known as Automatic Type Conversion. If the java compiler cannot perform the conversion automatically, they need to be cast explicitly. 
+
+There are two types of TypeCasting in Java.
+
+• Widening or Automatic Type Conversion.
+
+• Narrowing or Explicit Type Conversion.
+
+1. Widening or Automatic Type Conversion: When we assign a value of a smaller data type to a large data type, this process is known as Widening Type Casting. It is also known as Automatic Type Conversion because the Java compiler will perform the conversion automatically. This can happen only when the two data types are compatible. 
+
+```java
+byte -> short -> int -> long -> float -> double ( Widening or Automatic Type Conversion)
+ ```
+### Example 
+```java
+public class WideningConversation {
+    public static void main(String args[]) {
+
+        // Automatic Type Conversion.
+        int i = 2147483647; // Int max value in java.
+        long l = i; // Automatically converted to long, now we can extend l's value.
+        l = l + 1;
+        double d = l; // Automatically converted to double.
+        System.out.println("Int value : " + i);
+        System.out.println("Long value : " + l);
+        System.out.println("Double value : " + d);
+    }
+}
+
+## Output:
+Int value : 2147483647
+Long value : 2147483648
+Double value : 2.147483648E9
+```
+1. Narrowing or Explicit Type Conversion: When we assign a value of a large data type to a small data type, the process is known as Narrowing Type Casting. This can’t be done automatically. We need to convert the type explicitly. If we don’t perform casting, the java compiler will give a compile-time error. 
+```java
+double -> float -> long -> int -> short -> byte  ( Narrowing or Explicit Type Conversion)
+```
+### Example:
+```java
+public class ExplicitConversation {
+	public static void main(String args[]) {
+
+		// Explicit Type Conversion
+		double d = 25.123;
+		int i = (int) d;
+		byte b = (byte) i;
+		System.out.println("Double value : " + d);
+		System.out.println("Int value : " + i);
+		System.out.println("Byte value : " + b);
+	}
+}
+
+## Output
+Double value : 25.123
+Int value : 25
+Byte value : 25
+```
+</details>
+
+[Back to Top](README.md#java)
+
+## Author 
+
+• Vaibhav R. Kale - QA Tester
 
 [LinkedIn](https://www.linkedin.com/in/vaibhav-kale)
 
