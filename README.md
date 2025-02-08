@@ -1,9 +1,15 @@
 # JAVA
-[Introduction](README.md#Introsuction)
 
-[Basics](README.md#basics)
+- [Source Code Folder](https://github.com/vk0708/Java-For-Automation-Tester/tree/main/src)
+	src folder contains code with notes(in Comments)
+  
+- [Introduction and Java Basics](README.md#Introsuction)
 
-- All contains are dropdown, So click on Arrow to view
+- [Variables and Data Types](README.md##IntroductiontoVariables)
+
+- [Type Casting and Overflow & Underflow](README.md##TypeCastinginJava)
+
+All contains are dropdown, So click on Arrow to view
 
 ## Introduction
 • Java is a programming language that helps developers build software applications. It follows 
@@ -35,7 +41,7 @@ Programming languages can be grouped based on how they're structured:
 6. Encapsulation
 </details>
 
-## Basics 
+## Java Basics 
 <details>
 
 <summary>Basics of Java</summary>
@@ -325,12 +331,110 @@ Byte value : 25
 ```
 </details>
 
+## Overflow and Underflow in Java
+
+Overflow in java happens when we assign a value to a variable that is more than its range and Underflow is opposite to overflow. In case of overflow and underflow, the Java compiler doesn’t throw any error. It simply changes the value. 
+
+<details>
+For example, in the case of an int variable, its size is 4 bytes or 32 bits. The maximum value of int data type is 2,147,483,647  (Integer.MAX_VALUE) and after incrementing 1 on this value, it will return -2,147,483,648 (Integer.MIN_VALUE). This is known as overflow. The minimum value of int data type is -2,147,483,648  (Integer.MIN_VALUE) and after decrementing 1 on this value, it will return 2,147,483,647 (Integer.MAX_VALUE). This is known as underflow in Java.
+
+Example:
+```java
+public class OverflowExample {
+	public static void main(String args[]) {	
+		// Overflow
+		int overFlow = 2147483647;
+		System.out.println(“Overflow : “ + (overFlow + 1));         
+		
+		// Underflow
+		int underFlow = -2147483648;
+		System.out.println(“Underflow : “ + (underFlow - 1));     	
+ 	}
+}
+
+- Output:
+Overflow : -2147483648
+Underflow : 2147483647
+```
+</details>
+
+## Input / Output In Java
+Before discussing how to take input in java, let’s first understand how to print a statement in java. 
+
+1. Using println() method <br>
+2. Using print() method <br>
+3. Using printf() method
+
+<details>
+<summary>Read More Here</summary>
+
+### 1.Using println() method: 
+In java, we usually use println() method to print the text on the console. The text is passed as the parameter to this method in the form of string. This method prints the text on the console, and after printing the text, the cursor remains at the start of the next line at the console. The next printing takes place from the next line.<br>
+Example:
+```java
+System.out.println(“Vaibhav”);
+System.out.println(“Kale”);
+#Output:
+Vaibhav
+Kale
+```
+
+### 2. Using print() method: 
+In java, we usually use print() method to print the text on the console. The text is passed as the parameter to this method in the form of string. This method prints the text on the console, and after printing the text, the cursor remains at the end of the text at the console. The next printing takes place from just here.<br>
+Example:
+```java
+System.out.print(“Vaibhav”);
+System.out.print(“Kale”);
+# Output:
+VaibhavKale
+```
+
+### 3.Using printf() method: 
+The printf() method in java is used to print formatted data on the console. The print() and println() method take single arguments, but printf() method may take multiple arguments.<br>
+Example:
+```java
+// this will print upto 2 decimal places
+System.out.printf(“"Formatted with precision: PI = %.2f\n", Math.PI”);
+
+// Automatically appends Zeros to the 
+// rightmost part of the decimal
+float n = 5.2f;
+System.out.printf(“Formatted to specific width: n = %.4f\n", n”);
+
+Output:
+Formatted with precision: PI = 3.14
+Formatted to specific width: n = 5.2000
+```
+### Other Example:
+```java
+public class Test {
+	public static void main(String args[]) {
+		int age = 21;
+		String firstName = "King";
+		String lastName = "Kong";
+
+		System.out.println("My name is " + firstName + " " + lastName);
+		System.out.println("My age is " + age);
+	}
+}
+** Output:
+My name is King Kong
+My age is 21
+```
+</details>
+
 [Back to Top](README.md#java)
+<hr>
+
+## Reference
+- Coding Ninja
+- SDET-QA
+- College Notes
 
 ## Author 
 
-• Vaibhav R. Kale - QA Tester
-
+• Vaibhav R. Kale - QA Tester<br>
+[Code360](https://www.naukri.com/code360/profile/CoderVK) &nbsp; &nbsp;
 [LinkedIn](https://www.linkedin.com/in/vaibhav-kale)
 
-[Code360](https://www.naukri.com/code360/profile/CoderVK)
+
