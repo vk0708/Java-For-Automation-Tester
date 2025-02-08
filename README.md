@@ -421,6 +421,78 @@ public class Test {
 My name is King Kong
 My age is 21
 ```
+
+## Taking input in java
+In Java, there are mainly two ways to get the input from the user.
+- Using Scanner class
+- Using BufferedReader class
+
+### 1. Using Scanner class: 
+Scanner is a class in java that is used to take input from the user. It is present in the java.util package. Scanner class is one of the most preferable ways to take input from the user. This class is used to read the input of primitive types such as int, double, long, etc. and String. You need to import the java.util package before using the Scanner class.
+
+Methods of Scanner class in Java:<br>
+![image](https://github.com/user-attachments/assets/7d875c54-a6b6-4575-918e-d084d60ce6f9)
+
+Example 1: Taking int value from the user
+```java
+import java.util.Scanner;
+class TakingInputFromUser {
+     public static void main(String argo[]) {
+ 
+            // Creating an object of Scanner class
+            Scanner sc = new Scanner(System.in);
+ 
+            // Read integer value from the user
+            System.out.println(“Enter first number :”);
+            int a = sc.nextInt();
+ 
+            System.out.println(“Enter second number :”);
+            int b = sc.nextInt();
+ 
+          // Adding two values
+          int c = a + b;
+ 
+         // Printing the sum
+         System.out.println(“Sum is : “ +c);
+    }
+}
+
+## Output:
+Enter first number : 10
+Enter second number : 20
+Sum is : 30
+```
+Example 2: Taking String from the user
+```java
+import.java.util.Scanner;
+class TakingInputFromUser {
+      public static void main(String arg[]) {
+             Scanner sc = new Scanner(System.in);
+             System.out.println(“Enter a String : “);
+             // Read a string from the user
+             String str = sc.nextLine();
+             System.out.println(“Your entered string is : “ + str);
+    }
+}
+```
+</details>
+
+## Exercise
+[Drive Folder- Java Code](https://drive.google.com/drive/folders/13RLZ635Pk6msN_tWA2gGjXme3wLFthBh?usp=sharing)
+
+## Operators in Java
+Operators in Java are the special symbol specific operations on one, two, or three operands and then return a result. There are different types of operators available in Java which are given below:
+
+- Arithmetic Operators
+- Unary Operators
+- Assignment Operators
+- Relational Operators
+- Logical Operators
+- Bitwise Operators
+- Ternary Operators
+- Instance of Operators
+<details>
+<summary></summary>
 </details>
 
 [Back to Top](README.md#java)
