@@ -3,7 +3,7 @@
 - [Source Code Folder](https://github.com/vk0708/Java-For-Automation-Tester/tree/main/src)
 	src folder contains code with notes(in Comments)
   
-- [Introduction and Java Basics](README.md#Introsuction)
+- [Introduction and Java Basics](README.md##Introduction)
 
 - [Variables and Data Types](README.md##IntroductiontoVariables)
 
