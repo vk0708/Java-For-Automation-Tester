@@ -491,9 +491,295 @@ Operators in Java are the special symbol specific operations on one, two, or thr
 - Bitwise Operators
 - Ternary Operators
 - Instance of Operators
+
 <details>
-<summary></summary>
+<summary>Operators in Detailed</summary>
+
+### Arithmetic Operators
+Arithmetic Operators in Java are used to perform mathematical operations, i.e. Addition, Subtraction, Multiplication, and Division etc. The basic arithmetic operators in Java are given below:
+
+- Addition Operator (+) : It is used to add two numbers.
+- Subtraction Operator (-) : It is used to subtract two numbers.
+- Multiplication Operator (*) : It is used to multiply two numbers.
+- Division Operator (/) : It is used to divide two numbers.
+- Modulus Operator (%) : It is used to return the remainder of the division operation.
+
+```java
+public class ArithmeticOperators {
+   public static void main(String args[]) {
+      
+      // Taking two numbers
+      int a = 50;
+      int b = 20;
+   
+      // Performing addition operation
+      System.out.println(“Addition of “ +a+ “ and” +b+ “ is : “ +(a+b));
+
+      // Performing subtraction operation
+      System.out.println(“Subtraction of “ +a+ “ and” +b+ “ is : “ +(a-b));
+
+      // Performing multiplication operation
+      System.out.println(“Multiplication of “ +a+ “ and” +b+ “ is : “ +(a*b));
+
+      // Performing division operation
+      System.out.println(“Division of “ +a+ “ and” +b+ “ is : “ +(a/b));
+
+      // Performing modulus operation
+      System.out.println(“Modulus of “ +a+ “ and” +b+ “ is : “ +(a%b));
+   }
+}
+
+Output:
+Addition of 50 and 20 is : 70
+Subtraction of 50 and 20 is : 30
+Multiplication of 50 and 20 is : 1000
+Division of 50 and 20 is : 2
+Modulus of 50 and 20 is : 10
+
+```
+<hr>
+
+### Unary Operators
+ Unary Operators in Java are the types of operators that require only one operand. They form various operations on single operands such as incrementing or decrementing the value by one, negation of an expression, or inverting the value of a boolean. Let’s understand the various unary operators with an example.
+
+#### Unary minus operator (-): 
+This operator can be used to convert a negative value into a positive value or positive value into a negative value.
+```java
+      int num1 = 10;
+       num1 = -num1;
+       System.out.println(“Negative Value : “ +num1);
+       
+Output: Negative Value : -10
+```
+#### Unary NOT Operator (!): 
+This operator is used to convert the true to false and vice versa.
+```java
+// Using unary NOT operator.
+       System.out.println(“!(a < b) = “ + !(a < b));
+```
+#### Increment Operator (++): 
+This operator is used to increment the value by 1, There are two types of increment operator
+
+1. Post-increment operator: Post increment operator is used to increment the value of the variable after it has been evaluated for use in the expression.
+
+2. Pre-increment operator: Pre increment operator is used to increment the value of the variable before it’s evaluated in the expression.
+
+#### Decrement Operator (--): 
+This operator is used to decrement the value by 1. There are two types of decrement operators.
+
+1. Post-decrement operator: Post decrement operator is used to decrement the value of the variable after it has been evaluated for use in the expression.
+
+2. Pre-decrement operator: Pre decrement operator is used to decrement the value of the variable before it’s evaluated in the expression. 
+
+#### Bitwise Complement (~): 
+This operator is used to return the one’s complement representations of the input value.i.e, with all bits inverted, which means it makes every 0 to 1, and every 1 to 0. 
+
+<hr>
+
+### Assignment Operators
+The Assignment operators are used to assign a value to the variable. In Java, we can use many assignment operators. These are explained below:
+
+#### 1) +=: 
+This assignment operator is used to add the left operand with the right operand and then assigning it to a variable on the left.<br>
+- int num = 10;  <br>
+      num += 20;
+
+#### 2) -=: 
+This assignment operator is used to subtract the left operand with the right operand and then assign it to a variable on the left. <br>
+- num -= 10;
+
+#### 3) *=: 
+This assignment operator is used to multiply the left operand with the right operand and then assign it to a variable on the left.
+- num *= 5;
+
+#### 4) /=: 
+This assignment operator is used to divide the left operand with the right operand and then assign it to a variable on the left. <br>
+- num /= 2;
+
+#### 5) %=: 
+This assignment operator is used to modulo the left operand with the right operand and then assign it to a variable on the left. <br>
+- num %= 2;
+
+<hr>
+
+### Relational Operators
+The Relational operators are used to check the relationship between two operands. This operator is also called a comparison operator because it is used to make a comparison between two operands. The result of these operators is always boolean value. These operators are used in if statements and loops. There are many types of relational operators, which are given below:
+
+#### i) Equal to operator (==): 
+This operator is used to check whether the two operands are equal or not. If they are equal, it returns true; otherwise, it returns false.
+
+#### ii) Not Equal to operator (!=): 
+This operator is used to check whether the two operands are equal or not. It returns true(1) if the left operand is not equal to the right operand; otherwise, it returns false(0).
+
+#### iii) Greater than operator (>): 
+This operator is used to check whether the first operand is greater than the second operand or not. It returns true(1) if the first operand is greater than the second operand and false(0) if not.
+
+#### iv) Greater than equal to the operator (>=): 
+This operator is used to check whether the first operand is greater than or equal to the second operand or not. It returns true(1) if the first operand is greater than or equal to the second operand; otherwise, it returns false(0).
+
+#### v) Less than operator (<): 
+This operator is used to check whether the first operand is less than the second operand or not. It returns true(1) if the first operand is less than the second operand else returns false(0).
+
+#### vi) Less than or equal to operator (<=): 
+This operator is used to check whether the first operand is less than or equal to the second operand or not. It returns true(1) if the first operand is less than or equal to the second operand; else, return false(0).
+<hr>
+
+### Logical Operators:
+These operators are used to perform logical operations such as OR, AND, and NOT operation. It operates on two boolean values, which return true or false as a result. There are three types of Logical Operators in Java:
+
+#### i) Logical AND operator (&&): 
+This operator returns true(1), if both the conditions are true else returns false(0). 
+
+#### ii) Logical OR operator (||): 
+This operator returns true(1) if any one of the conditions is true. 
+
+#### iii) Logical NOT operator (!): 
+This operator is used to reverse the operand’s value. If the operand’s value is true, it returns false(0), and if the value of the operand is false, it returns true(1).
+<hr>
+
+### Bitwise Operators
+ The Bitwise operators are used to perform bit manipulation on numbers. There are various types of Bit operators that are used in Java.
+ 
+#### i) Bitwise AND operator (&):  
+It takes two numbers as operands and does AND on every bit of two numbers. The result of AND is 1 only if both bits are 1. Mind that the commutative property holds true here.
+That is,<br>
+              1 & 1 = 1 <br>
+              1 & 0 = 0 
+
+Example:
+```java
+int a = 6;
+      int b = 7;
+ 
+      // Binary representation of 6 is 0110
+      // Binary representation of 7 is 0111
+      // Result is                     0110 = 6
+      System.out.println(“a & b = “ + (a & b));
+```
+
+#### ii) Bitwise OR operator (|):  
+It takes two numbers as operands and does OR on every bit of two numbers. The result of OR is 1 if any of the two bits is 1. Mind that the commutative property holds true here.
+That is,<br>
+              1 | 1 = 1<br>
+              1 | 0 = 1<br>
+              0 | 0 = 0 
+
+#### iii) Bitwise NOT operator (~): 
+It takes one number and inverts all bits of it.
+    That is,<br>
+              ~1 = 0<br>
+              ~0 = 1           
+
+#### iv) Bitwise XOR  operator (^):  
+It takes two numbers as operands and does XOR on every bit of two numbers. The result of XOR is 1 if the two bits are different. Mind that the commutative property holds true here.That is,<br>
+              1 XOR 1 = 0. <br>
+              1 XOR 0 = 1. <br>
+              0 ^ 0 = 0 
+              
+#### v) Left shift operator (<<): 
+It takes two numbers, the left shift operator shifts the bits of the first operand, the second operand decides the number of places to shift.
+
+#### vi) Right shift operator (>>): 
+It takes two numbers; the right shift operator shifts the bits of the first operand, the second operand decides the number of places to shift.
+
+NOTE: The left shift and right shift operators should not be used for negative numbers. If any of the operands is a negative number, it results in undefined behaviour. For example results of both -1 << 1 and 1 << -1 is undefined. Also, if the number is shifted more than the integer’s size, the behaviour is undefined. For example, 1 << 33 is undefined if integers are stored using 32 bits.
+
+#### vii) Unsigned Right shift operator ( >>>): 
+This operator is used to shift the bits of the number to the right and fills 0 in the void spaces that are left as a result. The leftmost bit is set to be 0.
+<hr>
+
+### Ternary Operator
+Java Ternary operator is also known as the conditional operator: This operator is the only conditional operator in java that takes three operands. We can use ternary operator in place of if-else statement or even switch statement. The syntax of the ternary operator is shown below:
+```java
+variable = expression1 ? expression2 : expression3
+
+// Example:
+int a = 50;
+      int b = 100;
+      int minimum;
+
+      // Printing the value of a and b
+      System.out.println(“First Number = “ + a);
+      System.out.println(“Second Number = “ + b);
+     
+      // Find the minimum number 
+      minimum = (a < b) ? a : b;
+      
+     // Printing the minimum number
+     System.out.println(“Minimum Number = “ + minimum);
+ ```
+Here, if expression1 is true then expression2 is evaluated, else expression3 is evaluated.
+
+[Back to Top](README.md#java)
+
 </details>
+
+## Instance of operator
+The instanceof operator in java is used to compare an object to a specified type. We can use it to check if an object is an instance of a class, an instance of a subclass, or an instance of a class that implements a particular interface. The instanceof operator is either returned true or false. 
+
+<details>
+Example: 
+
+```java
+public class InstanceOfExample {
+   public static void main(String args[]) {
+      // Creating the objects of parent
+      // and the child class
+      ParentClass obj1 = new ParentClass();  
+      ChildClass obj2 = new ChildClass();
+
+      // Comparing the object to a specified type
+      System.out.println("obj1 is instance of ParentClass = " + (obj1 instanceof ParentClass));
+      System.out.println("obj1 is instance of ChildClass = " +  (obj1 instanceof ChildClass));
+      System.out.println("obj1 is instance of MyInterface = " + (obj1 instanceof MyInterface));
+      System.out.println("obj2 is instance of ParentClass = " + (obj2 instanceof ParentClass));
+      System.out.println("obj2 is instance of ChildClass = " +  (obj2 instanceof ChildClass));
+      System.out.println("obj2 is instance of MyInterface = " + (obj2 instanceof MyInterface));
+  }
+}
+
+// Creating parent class
+class ParentClass {
+}
+
+// Creating an interface
+interface MyInterface {
+}
+
+// Creating child class
+class ChildClass extends ParentClass implements MyInterface {
+}
+
+cmd>
+obj1 is instance of ParentClass = true
+obj1 is instance of ChildClass = false
+obj1 is instance of MyInterface = false
+obj2 is instance of ParentClass = true
+obj2 is instance of ChildClass = true
+obj2 is instance of MyInterface = true
+```
+Note: In the case of null value, it returns false because null is not an instance of anything. Let’s look at an example:
+Example:  
+
+```java
+public class InstanceOfOperator {
+   public static void main(String args[]) {
+   
+      // Creating an object of class
+      // and assigning it with null.
+      InstanceOfOperator obj = null;
+
+      // Returns false
+      System.out.println(obj instanceof InstanceOfOperator);
+  }
+}
+
+Output:
+false
+```
+</details>
+
+[Back to Top](README.md#java)
 
 [Back to Top](README.md#java)
 <hr>
