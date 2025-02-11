@@ -784,6 +784,334 @@ false
 [Back to Top](README.md#java)
 <hr>
 
+## Control Statements in Java
+A Control Statement is used to control the flow of the execution of a program. In the Java programming language, we can control the flow of execution of a program based on some conditions. In Java, we can put control statements in the following three categories. These are selection statements, iteration statements, and jump statements. 
+
+ 
+### Selection Statements:
+The selection statements in java allow your program to choose a different path of execution based on certain conditions. Java selection statements provide different types of selection statements such as:
+
+<details>
+<summary>Read More - if, Switch</summary>
+
+#### i) if statement: 
+The if statement in Java is a decision-making statement that determines whether or not a certain statement or block of statements will be executed. The block of statements is executed if a certain condition evaluates to true; otherwise, it is not.
+```java
+if(condition) {
+   // Code to be executed if the 
+   // Condition is true
+}
+```
+
+#### ii) if-else statement: 
+Java if statement is used to decide whether a certain statement or block of statements will be executed or not. If a certain condition is true, then the block of statements is executed, otherwise not. But if you want to do something else if your condition is false, then you should use else statements. One can use an else statement with if statement to execute the block of statements when the condition is false.
+
+```java
+if(condition) {
+	// execute this block if the
+	// condition is true
+}
+else {
+	// execute this block if the
+	// condition is false
+}
+```
+#### iii) nested if-statement: 
+nested if-statement means if statement inside the another if statement. In nested-if statements, the inner if block statements execute only if the outer if block statement is true. Let’s look at the example to understand better.
+
+```java
+if(condition1) {
+	// execute this block if condition1 is true
+	
+	if(condition2) {
+		// execute this block if condition2 is true
+	}
+}
+
+```
+
+#### iv) if-else-if ladder: 
+When we need to deal with different conditions in Java, we use the if-else-if ladder. From the top-down, the if sentences are executed. The assumption connected with that it is executed as soon as one of the conditions governing the if is true, and the remainder of the ladder is bypassed. The final else sentence will be executed if none of the conditions are valid. The final else sentence serves as a default condition, meaning that it is executed if all other conditional checks fail. There will be no steps taken if there is no final else and all other circumstances are incorrect.
+
+```java
+if(condition1) {
+    // If condition1 is true, this part of the code will be executed
+}
+else if (condition2) {
+    // If condition2 is true, this part of the code will be executed
+} 
+else if (condition3) {
+    // If condition3 is true, this part of the code will be executed
+}
+...
+else {
+    // If all the above conditions are false, this part of the code will be executed
+}
+
+```
+
+#### v) Switch Statement: 
+A multiway branch statement in Java is the switch statement. It can be used to run a single statement based on a set of conditions. It will deal with data types such as byte, short, char, and int. The value of the expression is compared to one of the literal values in the case statement in the Java switch statement. If there is a match, the code sequence that follows the case statement is executed. The default statement is used if none of the constants fit the value of the expression. It's not necessary to use the default sentence. The declaration sequence is terminated with the split statement within the turn event.
+
+```java
+switch (expression)  {
+    case constant1:
+        // Code to be executed 
+        // If expression is equal to constant1
+        break;
+    case constant2:
+        // Code to be executed 
+        // If expression is equal to constant2
+        break;
+        ...
+    default:
+        // Code to be executed 
+        // If the expression doesn't match any constant
+}
+```
+</details>
+
+### Iteration Statements
+Java iteration statements are used to repeat the set of statements until the condition of the termination is true. There are three types of iteration statements in java.
+
+ <details>
+<summary>While, Do while and For Loop</summary>
+
+#### i) while loop: 
+Java while loop is used to repeat a statement or block of the statement until a condition is true. We can use a while loop if the number of iterations is not fixed. The condition of a while loop is any boolean expression. The loop will run till the condition is true, if the condition becomes false the control goes to the next statement immediately following the loop.
+
+```java
+Syntax: 
+initialization;
+while (condition) {
+    // statements
+    update_expression;
+}
+
+Code:
+// Initialization
+       int i = 1;
+        // While loop run till the 
+        // condition is true
+        while(i < = 10) {
+             System.out.print(i + “ “);
+             // Increment the value by 1.
+             i++;
+        }
+```
+#### ii) do-while loop: 
+Java do-while loop is also used to repeat a statement until a condition is true. Sometimes in our program we want to execute the body of the loop at least once, even if the conditional expression is false, in other words, there are times when you would like to test the conditional expression at the end of the loop rather than the beginning. Then we should go for a do-while loop in java. It executes the body loop at least once because the conditional expression is checking at the end. Let’s look at the example to understand this.
+
+```java
+Syntax:
+initialization;
+do {
+    // statements
+    // update_expression;
+}
+while (condition);
+```
+#### iii) for loop: 
+The for loop in java is used to iterate a part of the program several times. It consumes the initialization, condition checking, and increment/decrement a value in one line. If the number of iterations is fixed then it is recommended you use Java for loop.
+
+Syntax:<br>
+for(initialization condition; testing condition; increment/decrement) {
+    // statements
+}
+
+```java
+/ for loop to print the value 
+      // from 1 to 10
+      for(int i = 1; i <= 10; i++)
+          System.out.print(i + “ “);
+```
+#### Java Enhanced for loop:  (foreach)
+Java Enhanced for loop provides a simpler way to iterate through the elements of a collection or array. It is used when we need to sequentially iterate through elements without knowing the index of the currently processing element.
+
+```java
+public class JavaEnhancedForLoop {
+   public static void main(String arg[]) {
+   
+      // array of string
+      String array[] = {“Coding”, “Ninjas”, “Welcomes”, “You”};
+      
+      // Enhanced for loop
+      for(String x : array) {
+         System.out.println(x);
+      }
+   }
+}
+```
+</details>
+
+### Jump Statements
+ In Java, we use jump statements to transfer the control of the program to other parts of the program. There are various types of jump statements in java.
+
+ 
+<details>
+
+#### i) break statement: 
+The loops are terminated using the Java break expression. It can be used within a loop. When a break statement is found within a loop, the loop is ended and control is passed to the next statement after the loop. There are three uses for the Java break statement.
+
+- It can be used to terminate a statement sequence in the switch statement.
+- It can be used to terminate a loop.
+- It can be used as a civilized form of goto statement for performing a labeled break.
+ 
+Syntax:<br>
+break;
+ 
+```java
+Example:
+public class JavaBreakStatement {
+ 	public static void main(String args[]) {
+     	for(int i = 1; i <= 10; i++) {
+         	// terminate the loop if i is 5.
+         	if(i == 5)
+            	break;
+         	System.out.print(i + “ “);
+     	}
+  	}
+}
+
+Output:
+1 2 3 4
+```
+#### ii) labeled break statement: 
+Java labeled break statement can be used as a civilized form of a goto statement. Java doesn’t provide a goto statement. It utilizes a label, which is a code block that must enclose the break statement but does not have to do so immediately. To exit a series of nested blocks, we can use labeled break statements.
+
+Example:
+```java
+public class JavaLabeledBreak {
+	public static void main(String args[]) {
+		boolean b = true;
+		// first label
+		first: {
+			// second label
+			second: {
+				// third label
+				third: {
+					System.out.println(“Before the break statement”);
+					// break will take the control out 
+					// of the second label
+					if(b)
+						break second;
+					System.out.println(“This would not be execute”);
+				}
+				System.out.println(“This would not be execute”);
+			}
+				System.out.println(“This is after the second block”);
+		}
+	}
+}
+ 
+Output:
+Before the break statement
+This is after the second block 
+```
+
+#### iii) continue statement: 
+Java continue statement is used to skip the current iteration of the loop. We can use continue statements in all types of loops. In the case of for loop, the continue statement forces the control to jump immediately to the update statement. In case of while and do-while loop the control immediately jumps to the boolean expression.
+ 
+Syntax:<br>
+continue;
+
+Example:
+```java
+public class JavaContinueStatement {
+    public static void main(String args[]) {
+        for(int i = 1; i <= 5; i++) {
+            // using continue statement
+            // skip the value when i is 3
+            if(i == 3)
+                continue;
+             
+            // Printing the value
+            System.out.print(i + “ “);
+        }
+    }
+}
+
+Output:
+1 2 4 5
+```
+
+#### iv) Continue Statement with nested loop: 
+It continues the inner loop only when you use the continue statement inside the inner loop.
+
+Example:
+```java
+public class JavaContinueNested {
+    public static void main(String args[]) {
+        // outer for loop
+        for(int i = 1; i <= 3; i++) {
+            // inner for loop
+            for(int j = 1; j <= 3; j++) {
+                // continue statement inside the inner loop
+                // to skip the current iteration when
+                // i == 2 and j == 2
+                
+                if(i == 2 && j == 2) {
+                    continue;
+                } 
+                System.out.println(i + “ “ + j);
+            }
+        }
+    }
+}   
+ 
+Output:
+1 1
+1 2
+1 3
+2 1
+2 3
+3 1
+3 2
+3 3
+```
+#### v) continue statement with labeled for loop: 
+Like the java break statement, the continue statement may also specify a label to describe which enclosing loop to continue. Let’s look at the example to understand better.
+
+Example:
+```java
+public class JavaLabeledContinue {
+    public static void main(String args[]) {
+        aa:
+        for(int i = 1; i <= 3; i++) {
+            bb:
+            for(int j = 1; j <= 3; j++) {
+                if(i == 2 && j == 2) {
+                    // using continue statement with label
+                        continue aa;
+                }
+                System.out.println(i + “ “ + j);
+            }
+        }
+    }
+}
+
+Output:
+1 1
+1 2
+1 3
+2 1
+2 3
+3 1
+3 2
+3 3
+```
+
+#### vi) return statement: 
+Java return statement is used to explicitly return from the method. It transfers the program control back to the caller method. The return statement immediately terminates the method in which it is executed. We need to declare a method return type in its method declaration. Any method declared void doesn’t return any value. A compile-time error can occur if you attempt to return a value from a method that is declared void.
+
+Syntax:
+
+return;
+
+</details>
+
+[Back to Top](README.md#java)
+
 ## Reference
 - Coding Ninja
 - SDET-QA
