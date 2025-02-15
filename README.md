@@ -1112,6 +1112,386 @@ return;
 
 [Back to Top](README.md#java)
 
+## Function in Java
+A function is a collection of statements or a block of code that is used to perform some specific task. It is used to reuse the code without retyping the code. We can write the function once and use it many times. We don’t need to write the code again and again. The function is executed only when we call it. In Java, a function is also called a method. 
+
+<b>Method Declaration in Java:</b> The method declaration in java provides information about the method attributes such as method name, method return type, method visibility, method parameters, and the method body. Let’s look at the example of the method declaration
+
+```java
+public int max(int x, int y) {
+    // Method body
+}
+```
+Here,
+- public: the public is a modifier.
+- int: int is a return type of method that means it returns an int value.
+- max: max is the name of the method.
+- int a, int b: int a, and int b is the list of parameters<br>
+
+![Screenshot_2025_0215_143528](../../Pictures/Screenshots/Screenshot_2025_0215_143528.png)
+
+<details>
+<summary>Example and in detailed about method </summary>
+
+### Example of Method Declaration: 
+In this example, we declare a method that accepts two parameters and returns the maximum of two numbers. Let’s look at the example:
+
+```java
+public int max(int x, int y) {
+ 
+    if(x > y)
+       return x;
+    else
+        return y;
+}
+ ```
+
+### Method Calling in Java: 
+Once we declare a method, we need to call this method to perform some specific task. When we call a method,  the program controls transfer to the called method. Let’s look at the example.
+
+```java
+public class Example {
+    // Function to return a maximum of two numbers
+    public static int max(int x, int y) {
+ 
+    if(x > y)
+       return x;
+    else
+        return y;
+    }
+ 
+    // Driver Method
+    public static void main(String arg[]) {
+       int a = 10;
+       int b = 20;
+  
+       // Method Calling
+       int maximum = max(a, b);
+       System.out.println(maximum);
+    }
+}
+ ``` 
+```java
+Output:
+20
+```
+![Screenshot_2025_0215_143548](_res/Screenshot_2025_0215_143548.png)
+
+Consider the following code where there is a function called findsum which calculates and returns the sum of two numbers.
+
+```java
+class Solution {
+    
+    public static int findSum(int a, int b) {
+        int sum = a + b;
+        return sum;
+    }
+    
+    public static void main(String args[]) {
+        
+        int a = 10;
+        int b = 20;
+        int c = findSum(a, b);
+        System.out.println(c);
+            
+    }
+}
+```
+
+The function being called is called <b> callee</b>(here it is findsum function) and the function which calls the callee is called the <b>caller</b> (here main function is the caller) . When a function is called, programme control goes to the entry point of the function. Entry point is where the function is defined. So focus now shifts to callee and the caller function goes in paused state. 
+
+For Example: In the above code entry point of the function <b>findSum()</b> is at line number 3. So when at line number 9 the function call occurs the control goes to line number 3, then after the statements in the function <b>findSum()</b> are executed the program control comes back to line number 9.
+
+ <b>Why do we need function?</b>
+
+- Reusability:  Once a function is defined, it can be used repeatedly. You can call the function as many times as needed, which saves work. Consider that you are required to find out the area of the circle. Now either you can apply the formula every time to get the circle area or make a function to find the area of the circle and invoke the function whenever needed.
+
+- Neat code: A     code created with a function is easy to read and dry run. You don’t need to repeatedly type the same statements; instead, you can invoke the function whenever needed.
+
+- Modularisation: Functions help in modularizing code. Modularisation means divides the code into small modules, each performing a specific task. Functions allow in doing so as they are the program’s tiny fragments designed to perform the specified task.
+
+- Easy Debugging: It is easy to find and correct the error in function compared to raw code without function where you must correct the error everywhere the specific task of the function is performed.
+
+</details>
+
+## Types of Methods in Java
+In Java, there are two types of methods:
+
+- Predefined Method
+- User-defined Method
+ 
+### Predefined Method
+Predefined methods are the methods that are already defined in the java class libraries. It's also known as the built-in method or the standard library method. At any point in our program, we can use predefined methods explicitly.Some predefined methods in java are: sqrt(), max(), min(), round(), etc. These are defined inside the Math class. Some predefined methods of String class are: length(), toUpperCase(), toLowerCase(), equals(), etc. Let’s look at some examples using predefined methods.
+
+ <details>
+<summary>Read More</summary>
+
+Example 1: Find the maximum of two numbers using the built-in method.
+
+```java
+public class MaxOfTwoNumbers {
+	public static void main(String args[]) {
+	
+		// Maximum of two numbers using Math.max()
+		int maximum = Math.max(100, 30);
+		System.out.println(maximum);
+	}
+}
+ 
+
+Output:<b>
+100
+```
+
+Example 2: Find the minimum of two numbers using the built-in method.
+
+```java
+public class MinOfTwoNumbers {
+	public static void main(String args[]) {
+	
+		// Minimum of two numbers using Math.min()
+		int minimum = Math.min(100, 30);
+		System.out.println(minimum);
+	}
+}
+ 
+Output:
+30
+ ```
+
+Example 3: Find the square root of a number using the built-in method.
+```java
+public class SqrtOfNumber {
+	public static void main(String args[]) {
+	
+		// Finding the square root of a number using Math.sqrt()
+		double sqrt = Math.sqrt(144);
+		System.out.println(sqrt);
+	}
+}
+Output:
+12.0
+ ```
+Example 4: Find string length using the built-in method.
+
+```java
+public class FindStringLength {
+	public static void main(String args[]) {
+	
+		String str = "Coding Ninjas";
+		
+		// Printing string length using length()
+		System.out.println(str.length());               
+	}
+}
+ 
+Output:
+13
+ ```
+Example 5: Convert the string into the upper case using the built-in method.
+
+```java
+public class UpperCaseString {
+	public static void main(String args[]) {
+	
+		String str = "Coding Ninjas";
+		
+		// Printing upper case string using toUpperCase()
+		System.out.println(str.toUpperCase());               
+	}
+}
+ 
+Output:
+CODING NINJAS
+```
+</details>
+
+### User-defined Method
+The method written by the user or programmer is called the user-defined method. We can modify these methods based on our requirements. Let’s discuss the user-defined method with all four combinations of arguments and return type.
+
+<details>
+<summary>Read More</summary>
+
+#### Types of user defined methods
+1. No argument(s) passed and no return value:
+
+When a function has no arguments, it doesn’t receive any data from the calling method. Similarly, when it doesn’t return a value, the calling method doesn’t receive any data from the called method.
+
+Syntax:
+```java
+Function declaration : void function();
+Function call : function();
+Function definition : void function()
+                      {
+                          Statements;
+                      }
+``` 
+
+Example: In this example, we have created a method checkEvenOdd() and we don’t pass any parameters to it. We simply write the code to check whether a number is even or odd as the body of the function. If the number is even, we simply print “Even Number”, else we print “Odd Number” and doesn’t return any value.
+
+```java
+public class Solution {
+	
+	// Function to check a number
+	// is even or odd
+	public static void checkEvenOdd() {
+		
+		// Number to be checked
+		int num = 24;
+		
+		if(num % 2 == 0) {
+			System.out.println("Even Number");
+		}
+		else {
+			System.out.println("Odd Number");
+		}
+	}
+	
+	public static void main(String args[]) {
+		// Method Calling
+		checkEvenOdd();
+	}
+		
+}
+
+Output:
+Even Number
+ ```
+ 
+2. No arguments passed but return a value:
+
+There could be a requirement in our program where we may need to design a method that takes no argument(s) but returns a value to the calling method. 
+
+Syntax:
+```java
+Function declaration : int function();
+Function call : function();
+Function definition : int function()
+                      {
+                          Statements;
+                          return x;
+                      }
+```
+
+Example:
+```java
+public class Solution {
+	
+	// Function to return the
+	// sum of two numbers
+	public static int sumOfTwoNumbers() {
+		
+		int a = 10;
+		int b = 20;
+		int sum = a + b;
+		
+		return sum;
+	}
+	
+	public static void main(String args[]) {
+		
+		// No arguments passed in the method
+		int sum = sumOfTwoNumbers();
+		System.out.println(sum);
+	}
+		
+}
+ 
+Output:
+30
+```
+3. Arguments passed but don't return a value:
+
+In this example, we have created a method to check whether a number is even or odd. This method doesn’t return any value but when we call this function we need to pass argument(s) to it.
+
+
+Syntax:
+```java
+Function declaration : int function(int x);
+Function call : function(x);
+Function definition : int function(x)
+                      {
+                          Statements;  
+                      }
+ ```
+ 
+Example:
+```java
+public class Solution {
+	
+	// Method to check a number is even or odd
+	public static void findEvenodd(int num) {
+		
+		if(num % 2 == 0) {
+			System.out.println("Even Number");
+		}
+
+		else {
+			System.out.println("Odd Number");
+		}
+	}
+	
+	// Driver Method
+	public static void main(String args[]) {
+
+		int num = 24;
+		
+		// argument passed in the method
+		findEvenodd(num);
+	}
+}	
+ 
+Output:
+Even Number
+```
+
+4. Arguments passed and do return a value:
+
+In this example, we have created a method that returns the sum of the two numbers and accepts argument(s).
+
+Syntax:
+```java
+Function declaration : int function(int x);
+Function call : function(x);
+Function definition : int function(x)
+                      {
+                          Statements;
+                          return x;
+                      }
+ ```
+ 
+Example:
+```java
+public class Solution {
+	
+	// Function to return the
+	// sum of two numbers
+	public static int sumOfTwoNumbers(int num1, int num2) {
+	
+		int sum = num1 + num2;
+		
+		// Return sum
+		return sum;
+	}
+	
+	public static void main(String args[]) {
+		
+		int a = 10;
+		int b = 20;
+		
+		// Method calling with arguments
+		System.out.println(sumOfTwoNumbers(a, b));
+	}
+		
+}
+
+Output:
+30
+```
+</details>
+
+[Back to Top](README.md#java)
+
 ## Reference
 - Coding Ninja
 - SDET-QA
