@@ -1490,6 +1490,110 @@ Output:
 ```
 </details>
 
+### Passing Parameters to Methods
+ - Pass by value in java: 
+
+The formal parameters are allocated to a new memory when the parameters are passed to a function using the pass-by-value method. The value of these parameters is the same as the value of the actual parameters. Changes in formal parameters would not represent changes in individual parameters because they are assigned to the new memory.
+
+<details>
+<summary>Example</summary>
+
+```java
+public class Solution {
+	
+	public static void increase(int x, int y) {
+		x++;
+		y = y + 2;
+		
+		// x and y are formal parameters
+		System.out.println(x + ":" + y);
+	}
+	
+	public static void main(String args[]) {
+		
+		int a = 20;
+		int b = 10;
+		increase(a, b);
+		
+		// a and b are actual parameters
+		System.out.println(a + ":" + b);
+			
+	}
+}
+ 
+Output:
+21:12
+20:10
+ ```
+ 
+Changes in x and y values are not reflected in a and b in the above code because x and y are formal parameters and are local to function increment; thus, any changes in their values here will not impact variables a and b within the key function.
+
+</details>
+
+### Method Overloading
+ 
+Method overloading in Java is when a class has multiple methods of the same name but different parameters. The main advantage of the method overloading is to increase the readability of the program. Method overloading is related to compile-time polymorphism. You will learn more about this in OOPs as well.
+
+
+Ways to overload a method: There are two ways to overload a method in java
+
+- By changing the number of arguments.
+- By changing the data type.
+ 
+<details>
+
+1. Method overloading with changing the number of arguments.
+
+In this example, we have created two methods, the first add() method performs the addition of the two numbers, and the second add() method performs the addition of the three numbers. Let’s look at the example
+
+```java
+public class Solution {
+	
+	// Function with two parameters
+	public static int add(int num1, int num2) {
+		return num1 + num2;
+	}
+	
+	// Function with three parameters
+	public static int add(int num1, int num2, int num3) {
+		return num1 + num2 + num3;
+	}
+	
+	public static void main(String args[]) {
+		
+		// Method calling by passing arguments
+		int sumOfTwoNumbers = Solution.add(10, 20);
+		int sumOfThreeNumbers = Solution.add(10, 20, 30);
+		
+		System.out.println(sumOfTwoNumbers);
+		System.out.println(sumOfThreeNumbers);
+	}
+		
+}
+ 
+
+Output:
+30
+60
+```
+
+2. Method overloading with changing the data type of arguments.
+In this example, we have created two add() methods with different data types. The first add() method takes two integer arguments and the second add() takes two double arguments. 
+
+```java
+public static int add(int num1, int num2) {
+		return num1 + num2;
+	}
+	
+	// Function with two double parameters
+	public static double add(double num1, double num2) {
+		return num1 + num2;
+	}
+```
+
+</details>
+
+
 [Back to Top](README.md#java)
 
 ## Reference
